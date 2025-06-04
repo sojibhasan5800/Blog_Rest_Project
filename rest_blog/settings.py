@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-=%(&^)^6h70&4$mih*vfw)hy36zigfe2^pd3th6y_bnfd=j406
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app"]
 
 
 # Application definition
@@ -113,7 +113,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'rest_blog.wsgi.application'
+WSGI_APPLICATION = 'rest_blog.wsgi.app'
 
 
 # Database
@@ -167,6 +167,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
